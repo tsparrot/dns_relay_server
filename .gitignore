@@ -1,0 +1,5 @@
+#python虚拟环境
+venv/
+#pycharm配置文件夹
+.idea/
+
