@@ -43,15 +43,16 @@ class myserver(BaseRequestHandler):
             sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
             sock.sendto(recvData, (nsip, 53))
             resData = sock.recv(4096)
+        output =""
 
         if dlevel == '1':
-            output = ""
+            #output = ""
             output += "当前时间为：%s\n" % time.asctime(time.localtime(time.time()))
             output += "Connected from: (%s,%s)\n" % self.client_address
             output += "查询的域名为：%s\n" % domain
             output += "ID=%s\n" % struct.unpack('>H', hRecv.id)
         elif dlevel == '2':
-            output = ""
+            #output = ""
             output += "当前时间为：%s\n" % time.asctime(time.localtime(time.time()))
             output += "Connected from: (%s,%s)\n" % self.client_address
             output += "查询的域名为：%s\n" % domain
