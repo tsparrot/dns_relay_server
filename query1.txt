@@ -72,6 +72,7 @@
 0.0.0.0 truefriends.net
 0.0.0.0 tty.yyun.net
 0.0.0.0 tuhart.net
+0.0.0.0 www.sougou.com
 0.0.0.0 u.t2cn.com
 0.0.0.0 vconsole.net
 0.0.0.0 vip.pnet.pl

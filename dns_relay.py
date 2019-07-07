@@ -56,7 +56,7 @@ class myserver(BaseRequestHandler):
             output += "当前时间为：%s\n" % time.asctime(time.localtime(time.time()))
             output += "Connected from: (%s,%s)\n" % self.client_address
             output += "查询的域名为：%s\n" % domain
-            output += "--请求报文--"
+            output += "--请求报文--\n"
             output += "--Header--\n"
             output += "ID=%s\nQR=%d " % (struct.unpack('>H', hRecv.id)[0], hRecv.qr)
             output += "OPCODE=%d " % hRecv.opcode
@@ -111,6 +111,9 @@ class myserver(BaseRequestHandler):
                 linelist = line.split(' ', 1)
                 localdomain = linelist[1]
                 localip = linelist[0]
+                print(domain)
+                print(localdomain)
+
                 if domain == localdomain:
                     return localip
             return 0
